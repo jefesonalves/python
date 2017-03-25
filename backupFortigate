@@ -1,5 +1,20 @@
 # This Python file uses the following encoding: utf-8
-#compatvel com linux
+# Script para reaalização de backup de Fortigate
+# Desenvolvido por Jefeson Ales
+# e-mail: jefesonbezerra@gmail.com
+# 
+# Requisitos:
+# - Cliente SCP
+# - Usuário READ-ONLY no Fortigate
+#   config system admin
+#   edit BACKUP_USER
+#   set password XXXXXXX
+#   set accprofile Read-Only
+#   end
+# - SCP Habilitado no Fortigate com o seguinte comando
+#     config system global
+#     set admin-scp enable
+#     end
 import subprocess
 
 nomefwl = input ("Digite o nome ou localidade do Firewall: ")
@@ -9,4 +24,4 @@ usuario = input ("Digite o usuário do Firewall: ")
 caminho = input ("Digite o local para armazenar o backup: ")
 datahora = input ("Digite a data do backup (formato: ddmmaaaahhmm ")
 
-subprocess.Popen("scp.exe, " + "-p " + porta + usuario + "@" + ipfwl + ":fgt-config" + caminho + location + datahora + ".conf")
+subprocess.Popen("scp.exe, " + "-p " + porta + usuario + "@" + ipfwl + ":sys-config" + caminho + location + datahora + ".conf")
