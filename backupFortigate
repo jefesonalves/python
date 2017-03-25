@@ -1,4 +1,5 @@
 # This Python file uses the following encoding: utf-8
+#compatvel com linux
 import subprocess
 
 nomefwl = input ("Digite o nome ou localidade do Firewall: ")
