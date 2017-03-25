@@ -15,7 +15,7 @@
 #     config system global
 #     set admin-scp enable
 #     end
-import subprocess
+import os
 
 nomefwl = input ("Digite o nome ou localidade do Firewall: ")
 ipfwl = input ("Digite o ip do Firewall: ")
@@ -23,5 +23,4 @@ porta = input ("Digite a porta ssh do Firewall: ")
 usuario = input ("Digite o usuário do Firewall: ")
 caminho = input ("Digite o local para armazenar o backup: ")
 datahora = input ("Digite a data do backup (formato: ddmmaaaahhmm ")
-
-subprocess.Popen("scp.exe, " + "-p " + porta + usuario + "@" + ipfwl + ":sys-config" + caminho + location + datahora + ".conf")
+os.system("scp " + "-p " + porta + " " + usuario + "@" + ipfwl + ":fgt-config:" + caminho + nomefwl + datahora + ".conf")
