@@ -1,22 +1,15 @@
 # This Python file uses the following encoding: utf-8
-# Script para reaalização de backup de Fortigate
+# Script para reaalização de backup do Firewall Fortigate da Fortinet
 # Desenvolvido por Jefeson Ales
 # e-mail: jefesonbezerra@gmail.com
 #
-# ----Teste----
+# ----Em desenvolvimento----
 # 
 # Requisitos:
 # - Cliente SCP
 # - Usuário READ-ONLY no Fortigate
-#   config system admin
-#   edit BACKUP_USER
-#   set password XXXXXXX
-#   set accprofile Read-Only
-#   end
 # - SCP Habilitado no Fortigate com o seguinte comando
-#     config system global
-#     set admin-scp enable
-#     end
+
 import os
 
 nomefwl = input ("Digite o nome ou localidade do Firewall: ")
