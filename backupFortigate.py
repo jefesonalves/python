@@ -18,4 +18,5 @@ porta = input ("Digite a porta ssh do Firewall: ")
 usuario = input ("Digite o usuário do Firewall: ")
 caminho = input ("Digite o local para armazenar o backup: ")
 datahora = input ("Digite a data do backup (formato: ddmmaaaahhmm ")
+
 os.system("scp " + "-p " + porta + " " + usuario + "@" + ipfwl + ":fgt-config:" + caminho + nomefwl + datahora + ".conf")
