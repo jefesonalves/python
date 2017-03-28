@@ -14,6 +14,7 @@ import time
 from datetime import datetime
 
 os.system("clear")
+os.system("mkdir ~/backup_fgt/")
 print ("------------------------------------")
 print ("Script para backup do Fortigate.")
 print ("Aguarde tres segundos...")
@@ -27,8 +28,8 @@ siglalocal = input ("1. Digite a sigla da localidade: ").upper()
 ipfwl = input ("2. Digite o endereço IP: ")
 porta = input ("3. Digite a porta scp ")
 usuario = input ("4. Digite o usuário: ")
-caminho = input ("5. Digite o local para armazenar o backup: ")
+caminho = ("~/backup_fgt/")
 
 data = datetime.now().strftime('%d%m%Y_%H%M')
 
-os.system("scp -P " + porta + " " + usuario + "@" + ipfwl + ":sys_config " + caminho + "FGT" + siglalocal + data + ".conf")
+os.system("scp -P " + porta + " " + usuario + "@" + ipfwl + ":sys_config " + caminho + "FGT-" + siglalocal + data + ".conf")
