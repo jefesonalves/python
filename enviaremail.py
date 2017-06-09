@@ -1,4 +1,5 @@
 # This Python file uses the following encoding: utf-8
+# Enviar e-mail com o servidor gmail
 import smtplib
 
 #Parâmetros
