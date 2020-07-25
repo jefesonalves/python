@@ -1,6 +1,3 @@
-x = float(input("Digite o valor de X: "))
-y = float(input("Digite o valor de Y: "))
+a = "Um elefante incomoda muita gente"
 
-z = (x**2 + y**2) / (x - y)**2
-
-print ("O valor de Z é igual a: ", z)
+print (a[3:20])
