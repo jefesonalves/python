@@ -1,0 +1,5 @@
+velCarroX = int(60)
+velCarroY = int(90)
+distancia = int(input())
+tempo = int((60 * distancia) / 30)
+print ((tempo), 'minutos')
