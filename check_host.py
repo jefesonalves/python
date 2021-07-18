@@ -1,6 +1,6 @@
 # This Python file uses the following encoding: utf-8
 # Script para checagem de host com ping
-# Desenvolvido por Jefeson Ales
+# Desenvolvido por Jefeson Alves
 # e-mail: jefesonbezerra@gmail.com
 
 import os, re

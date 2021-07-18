@@ -1,7 +1,7 @@
 # This Python file uses the following encoding: utf-8
 '''
 Script para realização de backup do Firewall Fortigate da Fortinet
-Desenvolvido por Jefeson Ales
+Desenvolvido por Jefeson Alves
 e-mail: jefesonbezerra@gmail.com
 Requisitos:
 - Sistema operacional Linux;
@@ -32,4 +32,4 @@ caminho = ("~/backup_fgt/") # Variável que armazena o caminho onde será salvo 
 data = datetime.now().strftime('%d%m%Y_%H%M') # Variável que armazena o dia, mês, ano e horário atual
 
 # Comando do linux para executar o backup utilizando as varíáveis declaradas
-os.system("scp -P " + porta + " " + usuario + "@" + ipfwl + ":sys_config " + caminho + "FGT-" + siglalocal + data + ".conf") 
+os.system("scp -P " + porta + " " + usuario + "@" + ipfwl + ":sys_config " + caminho + "FGT-" + siglalocal + data + ".conf")
