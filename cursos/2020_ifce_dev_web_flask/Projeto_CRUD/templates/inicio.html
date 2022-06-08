@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Agenda de Contatos </h2>
+<td><a href="{{url_for("novo")}}"> Novo</a></td>
+<table>
+  <tr>
+    <th>Código</th>
+    <th>Nome</th>
+    <th>Ação</th>
+  </tr>
+  {%for usuario in usuarios%}
+  <tr>
+    <td>{{usuario.nome}}</td>
+    <td>{{usuario._id}}</td>
+    <td><a href="{{ url_for("editar",id=usuario._id)}}">editar</a> <a href="{{ url_for("deletar",id=usuario._id)}}">deletar</a></td>    
+  </tr>
+  {%endfor%}  
+</table>
+
+</body>
+</html>

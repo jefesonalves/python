@@ -1,0 +1,5 @@
+frase = input("Digite uma frase: ")
+# print(frase.upper())
+conversao = frase.upper()
+conversao = conversao.replace(" ", "")
+print(conversao)
