@@ -1,1 +1,1 @@
-# Algoritmos em Python.
+# Estudos Python.
