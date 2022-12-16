@@ -1,1 +1,1 @@
-# Estudos Python.
+# Repositório exclusivo para a Linguagem Python.
