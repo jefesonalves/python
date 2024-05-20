@@ -1,59 +1,18 @@
 import os
 
-def verificar_dir():
+def mudar_nome_arquivos():
+    os.system("clear")
     dir_atual = os.getcwd()
-    return dir_atual
-
-def mudar_dir():
-    dir_informado = os.chdir(input("Informe:"))
-    return dir_informado
-
-def contar_arquivos():
+    print("Diretório atual: ", dir_atual)
+    dir_informado = os.chdir(input("Informe o nome do diretório: "))
     quant_arquivos = int(len(os.listdir()))
-    return quant_arquivos
-
-def listar_arquivos():
     arquivos = (os.listdir())
-    return arquivos
+    prefixo = input("Informe o prefixo: ")
+    ext = "."+input("Informe a extensão do arquivo (ex: avi): ")
 
-def definir_name(prefixo):
-    for i in range(0, 10, 1):
-        prefixo = prefixo+f'{i:04d}'
-        return prefixo
+    for i in range(0, quant_arquivos, 1):           
+        arquivo_antigo = arquivos[i]
+        novo_arquivo = prefixo+f'{i:04d}'+ext
+        os.rename(arquivo_antigo, novo_arquivo)
 
-mudar_dir()
-
-
-# def prefixo_ext():
-#     for i in range(0, 1001, 1):
-#         prefix = input("Informe o prefixo: "+ f'MOVI{i:04d}')
-#         ext = input("Informe a extensão: ")
-#         print(prefix+ext)
-        
-#         print("# Processo:",file + 1)   
-#         old_file = files[file]
-#         print("Nome do arquivo original: "+old_file)
-#         new_file = prefix+str(file)+ext
-#         os.rename(old_file, new_file)
-#         print("Arquivo renomeado para: "+new_file)
-#         print("\n")
-#         print("Arquivos renomeados!")
-
-
-# diretorio()
-# prefixo_ext()
-
- 
-# 
-# 
-# os.system("clear")
-
-# for file in range(limit):
-#     print("# Processo:",file + 1)   
-#     old_file = files[file]
-#     print("Nome do arquivo original: "+old_file)
-#     new_file = prefix+str(file)+ext
-#     os.rename(old_file, new_file)
-#     print("Arquivo renomeado para: "+new_file)
-#     print("\n")
-# print("Arquivos renomeados!")
+mudar_nome_arquivos()
