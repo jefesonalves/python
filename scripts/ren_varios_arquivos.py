@@ -20,5 +20,6 @@ def mudar_nome_arquivos():
         novo_arquivo = prefixo+f'{i:04d}'+ext
         print("Nome alterado para:", novo_arquivo)
         os.rename(arquivo_antigo, novo_arquivo)
+    print("\n", processo, "arquivos renomeados.")
 
 mudar_nome_arquivos()
