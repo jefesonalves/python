@@ -1,8 +1,8 @@
 continua = True
 i = 1
-
 salario_homens = 0
 salario_mulheres = 0
+
 while continua:
     sexo = input(f"Digite o sexo da {i}ª pessoa (M/F): ")
     if (sexo == "M" or sexo == "m"):
