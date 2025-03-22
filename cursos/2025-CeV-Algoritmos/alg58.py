@@ -12,4 +12,4 @@ while continua:
 
 media_idades = soma_idades / i
 print(f"Quantidade de alunos: {i}")
-print(f"Média de alunos: {media_idades}")
+print(f"Média de idade dos alunos: {media_idades}")
